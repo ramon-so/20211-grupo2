@@ -17,7 +17,7 @@ public class HomeController {
 
 	@GetMapping("/curso/cadastrar")
 	public ModelAndView cadastrarLivro() {
-		return new ModelAndView("cadastrarCurso");
+		return new ModelAndView("cadastrarCliente");
 	}
 
 	@GetMapping("/aluno/cadastrar")

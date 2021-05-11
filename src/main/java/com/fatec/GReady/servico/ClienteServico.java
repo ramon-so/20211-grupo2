@@ -16,5 +16,5 @@ public interface ClienteServico {
 
 	public String obtemEndereco(String cep);
 
-	
+	public String sendMail(Cliente cliente);
 }
