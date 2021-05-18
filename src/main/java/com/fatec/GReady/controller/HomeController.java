@@ -19,6 +19,16 @@ public class HomeController {
 	public ModelAndView cadastrarLivro() {
 		return new ModelAndView("cadastrarCliente");
 	}
+	
+	@GetMapping("/curso/matricula")
+	public ModelAndView matricularAluno() {
+		return new ModelAndView("cadastrarMatricula");
+	}
+	
+	@GetMapping("/curso/matriculaCancelar")
+	public ModelAndView matricularAlunoC() {
+		return new ModelAndView("cancelarMatricula");
+	}
 
 	@GetMapping("/aluno/cadastrar")
 	public ModelAndView cadastrarAluno() {
