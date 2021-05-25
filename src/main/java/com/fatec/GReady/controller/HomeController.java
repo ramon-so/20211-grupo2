@@ -22,7 +22,7 @@ public class HomeController {
 	
 	@GetMapping("/curso/matricula")
 	public ModelAndView matricularAluno() {
-		return new ModelAndView("cadastrarMatricula");
+		return new ModelAndView("matricularAluno");
 	}
 	
 	@GetMapping("/curso/matriculaCancelar")

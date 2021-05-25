@@ -1,10 +1,12 @@
 package com.fatec.GReady.servico;
+
 import org.springframework.web.servlet.ModelAndView;
 
 import com.fatec.GReady.model.Cliente;
+import com.fatec.GReady.model.matricula;
 
-public interface ClienteServico {
-	public Iterable<Cliente> findAll();
+public interface MatriculaServico {
+	public Iterable<matricula> findAll();
 
 	public Cliente findByCpf(String cpf);
 
@@ -16,5 +18,4 @@ public interface ClienteServico {
 
 	public String obtemEndereco(String cep);
 
-	//public String sendMail(Cliente cliente);
 }

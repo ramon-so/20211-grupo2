@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SpakUp</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" th:href="@{/css/estilo-menu.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/estilo-Matricular.css}" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header>
+		  <nav>
+		    <ul>
+		      <li><a href="/" >Home</a></li>
+		      <li><a href="#">Cadastar curso</a></li>
+		      <li><a href="/curso/matricula" class="active">Matricular aluno</a></li>
+		      <li><a href="#">Alterar matricula</a></li>
+		      <li><a href="/login?logout">Sair</a></li>
+		    </ul>
+		  </nav>
+		</header>
+		<h1 style="color:white;"> Get Ready!</h1><br><br>
+		<h2 style="color:white; text-align: center;">Preencha os dados para matricula</h2>
+		<form action="#" th:action="@{/sig/clientes}" th:object="${matricula}" method="post">
+			<input type="text" name="" value="">
+			<input type="text" name="" value="">
+			<input type="date" name="" value="">
+			<input type="text" name="" value="">
+			<input type="email" name="" value="">
+			<input type="tel" name="" value="">
+			<button type="submit">Matricular</button>
+		</form>
+</body>
+</html>

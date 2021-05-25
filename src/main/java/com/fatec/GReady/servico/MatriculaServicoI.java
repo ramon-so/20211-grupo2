@@ -7,23 +7,23 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.fatec.GReady.model.Cliente;
-import com.fatec.GReady.model.ClienteRepository;
 import com.fatec.GReady.model.Endereco;
+import com.fatec.GReady.model.MatriculaRepository;
+import com.fatec.GReady.model.matricula;
 
 @Service
-public class ClienteServicoI implements ClienteServico {
+public class MatriculaServicoI {
 	Logger logger = LogManager.getLogger(ClienteServicoI.class);
 	@Autowired
-	private ClienteRepository repository;
+	private MatriculaRepository repository;
 	//@Autowired
 	//private JavaMailSender mailSender;
 
-	public Iterable<Cliente> findAll() {
+	public Iterable<matricula> findAll() {
 		return repository.findAll();
 	}
 
-	public Cliente findByCpf(String cpf) {
+	public matricula findByCpf(String cpf) {
 		return repository.findByCpf(cpf);
 	}
 
@@ -32,27 +32,11 @@ public class ClienteServicoI implements ClienteServico {
 		logger.info(">>>>>> 2. comando exclusao executado para o id => " + id);
 	}
 
-	public Cliente findById(Long id) {
+	public matricula findById(Long id) {
 		return repository.findById(id).get();
 	}
 
-	/*public String sendMail(Cliente cliente) {
-		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("blakeaju@gmail.com");
-		message.setTo(cliente.getEmail());
-		message.setSubject("Confirmação do cadastro de cliente");
-		message.setText(cliente.toString());
-		try {
-			mailSender.send(message);
-			logger.info(">>>>>> 5. Envio do e-mail processado com sucesso.");
-			return "Email enviado";
-		} catch (Exception e) {
-			e.printStackTrace();
-			return "Erro ao enviar e-mail.";
-		}
-	}*/
-
-	public ModelAndView saveOrUpdate(Cliente cliente) {
+	public ModelAndView saveOrUpdate(matricula cliente) {
 		ModelAndView modelAndView = new ModelAndView("consultarCliente");
 		try {
 			String endereco = obtemEndereco(cliente.getCep());
