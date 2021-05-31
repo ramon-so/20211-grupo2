@@ -5,6 +5,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MatriculaRepository extends CrudRepository<matricula, Long>{
-	public matricula findByCpf(@Param("cpf") String cpf);
+public interface MatriculaRepository extends CrudRepository<Matricula, Long> {
+	public Matricula findByCpf(@Param("cpf") String cpf);
 }

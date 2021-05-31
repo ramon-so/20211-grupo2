@@ -15,6 +15,7 @@ form{
 form input{
   background-color: #35393b;
   height: 30px;
+  width: 90%;
   color: white;
   border-radius: 20px;
   padding-left: 10px;
@@ -30,6 +31,11 @@ form input:focus{
               0 0 25px #03e9f4,
               0 0 50px #03e9f4,
               0 0 200px #03e9f4;
+}
+form label{
+	font-weight: bolder;
+	color: white;
+	margin-left: 5%;
 }
 button{
     display: inline-block;

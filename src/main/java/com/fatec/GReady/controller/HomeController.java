@@ -14,26 +14,6 @@ public class HomeController {
 	public ModelAndView autenticacao() {
 		return new ModelAndView("paginaLogin");
 	}
-
-	@GetMapping("/curso/cadastrar")
-	public ModelAndView cadastrarLivro() {
-		return new ModelAndView("cadastrarCliente");
-	}
-	
-	@GetMapping("/curso/matricula")
-	public ModelAndView matricularAluno() {
-		return new ModelAndView("matricularAluno");
-	}
-	
-	@GetMapping("/curso/matriculaCancelar")
-	public ModelAndView matricularAlunoC() {
-		return new ModelAndView("cancelarMatricula");
-	}
-
-	@GetMapping("/aluno/cadastrar")
-	public ModelAndView cadastrarAluno() {
-		return new ModelAndView("cadastrarCliente");
-	}
 	
 	@GetMapping("/error")
 	public ModelAndView error() {

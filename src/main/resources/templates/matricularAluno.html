@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>SpakUp</title>
+<title>Get Ready!</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -27,13 +27,37 @@
 		</header>
 		<h1 style="color:white;"> Get Ready!</h1><br><br>
 		<h2 style="color:white; text-align: center;">Preencha os dados para matricula</h2>
-		<form action="#" th:action="@{/sig/clientes}" th:object="${matricula}" method="post">
-			<input type="text" name="" value="">
-			<input type="text" name="" value="">
-			<input type="date" name="" value="">
-			<input type="text" name="" value="">
-			<input type="email" name="" value="">
-			<input type="tel" name="" value="">
+		<form action="#" th:action="@{/sig/matriculas}" th:object="${matricula}" method="post">
+			<div>
+				<label for="nome">Nome</label>
+				<input type="text" id="nome" name="nome" value="">
+			</div>
+			
+			<div>
+			<label for="cpf">CPF</label>
+			<input type="text" id="cpf" name="cpf" value="">
+			</div>
+			
+			<div>
+			<label for=""data"">Data de Nascimento</label>
+			<input type="date" id=""data"" name="data" value="">
+			</div>
+			
+			<div>
+			<label for="nome">Endereço</label>
+			<input type="text" name="endereco" value="">
+			</div>
+			
+			<div>
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" value="">
+			</div>
+			
+			<div>
+			<label for="telefone">Telefone</label>
+			<input type="tel" id="telefone" name="telefone" value="">
+			</div>
+			
 			<button type="submit">Matricular</button>
 		</form>
 </body>
