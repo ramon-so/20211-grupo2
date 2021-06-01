@@ -30,6 +30,8 @@ public class MatriculaServicoI implements MatriculaServico{
 	}
 	public ModelAndView saveOrUpdate(Matricula matricula) {
 		ModelAndView modelAndView = new ModelAndView("consultarMatricula");
+		repository.save(matricula);
+		modelAndView.addObject("matriculas", repository.findAll());
 		return modelAndView;
 	}
 }

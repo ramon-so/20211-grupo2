@@ -7,17 +7,28 @@
 <meta name="viewport" content="width=device-width" />
 <title>Lista de matriculas</title>
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-	crossorigin="anonymous">
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" th:href="@{/css/estilo-menu.css}" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <body>
+		<header>
+		  <nav>
+		    <ul>
+		      <li><a href="/" class="active">Home</a></li>
+		      <li><a href="/sig/cliente">Cadastar cliente</a></li>
+		      <li><a href="/sig/matricula">Matricular aluno</a></li>
+		      <li><a href="/sig/matriculas">Ver matriculas</a></li>
+		      <li><a href="/login?logout">Sair</a></li>
+		    </ul>
+		  </nav>
+		</header>
+		<h1 style="color:white;"> Get Ready!</h1>
 	<div class="panel panel-default" style="margin: 10px">
 		<div class="panel-heading">
 			<h5 class="panel-title">Lista de matriculas</h5>
@@ -40,7 +51,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="cliente : ${matriculas}">
+						<tr th:each="matricula : ${matriculas}">
 							<td th:text="${matricula.id}"></td>
 							<td th:text="${matricula.cpf}"></td>
 							<td th:text="${matricula.nome}"></td>

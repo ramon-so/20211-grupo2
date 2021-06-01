@@ -20,9 +20,6 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<header th:replace="fragments/header :: menuSuperior">
-		<div>header</div>
-	</header>
 	<div class="container my-5">
 		<br />
 		<h3>Cadastrar cliente</h3>
@@ -78,8 +75,5 @@
 			</div>
 			<h6 th:text="${message}" class="text-danger"></h6>
 		</div>
-		<footer th:replace="fragments/footer :: rodape">
-			<div>footer</div>
-		</footer>
 </body>
 </html>

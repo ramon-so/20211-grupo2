@@ -34,6 +34,9 @@ public class Matricula {
 	
 	@NotNull
 	private String telefone;
+	
+	public Matricula() {
+	}
 
 	public Matricula(@Size(min = 11, message = "CPF deve ter 11 caracteres") String cpf, String nome, String email,
 			String dataNascimento, String endereco, String telefone) {

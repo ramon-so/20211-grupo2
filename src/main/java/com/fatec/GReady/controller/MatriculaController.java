@@ -27,7 +27,7 @@ public class MatriculaController {
 	@GetMapping("/matriculas")
 	public ModelAndView retornaConsultaDeTodasMatriculas(Matricula matricula) {
 		ModelAndView modelAndView = new ModelAndView("consultarMatricula");
-		modelAndView.addObject("matricula", matricula);
+		modelAndView.addObject("matricula", servico.findAll());
 		return modelAndView;
 	}
 	
