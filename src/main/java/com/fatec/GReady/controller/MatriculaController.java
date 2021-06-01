@@ -80,6 +80,7 @@ public class MatriculaController {
 		umaMatricula.setEndereco(matricula.getEndereco());
 		umaMatricula.setEmail(matricula.getEmail());
 		umaMatricula.setTelefone(matricula.getTelefone());
+		umaMatricula.setModulo(matricula.getModulo());
 		
 		modelAndView = servico.saveOrUpdate(umaMatricula);
 		

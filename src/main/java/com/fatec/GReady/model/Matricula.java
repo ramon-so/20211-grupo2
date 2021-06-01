@@ -35,17 +35,21 @@ public class Matricula {
 	@NotNull
 	private String telefone;
 	
+	@NotNull
+	private String modulo;
+	
 	public Matricula() {
 	}
 
 	public Matricula(@Size(min = 11, message = "CPF deve ter 11 caracteres") String cpf, String nome, String email,
-			String dataNascimento, String endereco, String telefone) {
+			String dataNascimento, String endereco, String telefone, String modulo) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.email = email;
 		this.dataNascimento = dataNascimento;
 		this.endereco = endereco;
 		this.telefone = telefone;
+		this.modulo = modulo;
 	}
 
 	public Long getId() {
@@ -54,6 +58,14 @@ public class Matricula {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getModulo() {
+		return modulo;
+	}
+
+	public void setModulo(String modulo) {
+		this.modulo = modulo;
 	}
 
 	public String getCpf() {

@@ -12,6 +12,11 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	function consulta() {
+		window.open("/sig/matriculas");
+	}
+</script>
 </head>
 <body>
 <header>
@@ -27,7 +32,7 @@
 		</header>
 		<h1 style="color:white;"> Get Ready!</h1><br><br>
 		<h2 style="color:white; text-align: center;">Preencha os dados para matricula</h2>
-		<form action="#" th:action="@{/sig/matriculas}" th:object="${matricula}" method="post">
+		<form action="#" th:action="@{/sig/matriculas/{id} (id=${matricula.id})}" th:object="${matricula}" method="post">
 			<div>
 				<label for="nome">Nome</label>
 				<input type="text" th:field="*{nome}" id="nome" name="nome" value="">
@@ -45,8 +50,8 @@
 			
 			<div>
 			<label for=""data"">Módulo</label>
-			<select h:field="*{modulo}" name="modulo">
-				<option value="">--Selecione uma opção--</option>
+			<select th:field="*{modulo}" name="modulo">
+				<option value=""></option>
 				<option value="Basico">Basico</option>
 				<option value="Intermediario">Intermediario</option>
 				<option value="Avançado">Avançado</option>
